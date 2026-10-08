@@ -6,9 +6,9 @@
 # ===============================================================
 
 name: "Dr Benjamin Atta Owusu"
+short_name: "Benjamin Atta Owusu"   # shown in the top bar
 initials: "BAO"
 role: "Postdoctoral Research Fellow"
-hero_tagline: "Health data scientist and epidemiologist. I study heart failure and the conditions that come with it, using linked routine health records."
 organisation: "Exeter Collaboration for Academic Primary Care (APEx), University of Exeter"
 email: "b.owusu@exeter.ac.uk"
 
@@ -31,11 +31,16 @@ google_scholar: ""
 linkedin: ""
 github: "https://github.com/benteeta"
 
-# Short facts shown under your name on the home page.
-# Publication counts are added automatically from _data/publications.yml.
+# Funding cards in the "Track record" section of the home page.
+# The publication cards next to them are counted automatically
+# from _data/publications.yml.
 highlights:
-  - "Lead applicant, £55,000 EPSRC LEAP Digital Health Hub fellowship"
-  - "Graduate Statistician (GradStat), Royal Statistical Society"
+  - number: "£55,000"
+    label: "EPSRC LEAP fellowship"
+    detail: "Lead applicant, 2024"
+  - number: "£14,000"
+    label: "HDR UK South West seedcorn"
+    detail: "Co-applicant, 2025"
 
 # Set to true to show the "Work with me" menu link and home-page button.
 # Check the University of Exeter's policy on outside work first.

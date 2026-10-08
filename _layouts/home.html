@@ -1,54 +1,158 @@
 ---
 layout: default
 ---
-{% comment %} Count papers from _data/publications.yml so the numbers never go out of date. {% endcomment %}
+{% comment %}
+  The home page. Text for each part comes from:
+    hero paragraph       index.md
+    interest cards       _data/interests.yml
+    project cards        _data/projects.yml (projects with featured: true)
+    recent outputs       _data/publications.yml (newest three published)
+    track record cards   counted from _data/publications.yml, plus "highlights" in _config.yml
+{% endcomment %}
+{% assign me = site.name_in_papers %}
+{% assign me_length = me | size %}
 {% assign n_published = 0 %}
 {% assign n_review = 0 %}
+{% assign n_first = 0 %}
 {% for pub in site.data.publications %}
   {% if pub.status == "under review" %}
     {% assign n_review = n_review | plus: 1 %}
   {% else %}
     {% assign n_published = n_published | plus: 1 %}
+    {% assign lead_author = pub.authors | slice: 0, me_length %}
+    {% if lead_author == me %}{% assign n_first = n_first | plus: 1 %}{% endif %}
   {% endif %}
 {% endfor %}
 
 <section class="hero">
+  <svg class="hero-mark" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M0 6 H140 V11 H260 V18 H350 V22 H470 V29 H560 V33 H690 V39 H780 V42 H910 V47 H1020 V50 H1200"/>
+    <path class="faint" d="M0 6 H180 V15 H300 V25 H420 V31 H540 V40 H700 V45 H860 V52 H1200"/>
+  </svg>
   <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">{{ site.role }}</p>
-      <h1>{{ site.name }}</h1>
-      <p class="tagline">{{ site.hero_tagline }}</p>
-      <p class="org">{{ site.organisation }}</p>
+    <div class="hero-side">
+      <div class="portrait">
+        {% if site.photo and site.photo != "" %}
+          <img src="{{ site.photo | relative_url }}" alt="Photo of {{ site.name }}" width="230" height="250">
+        {% else %}
+          <span class="monogram" aria-hidden="true">{{ site.initials }}</span>
+        {% endif %}
+      </div>
+      <ul class="hero-links" aria-label="Contact and profiles">
+        <li><a class="round-link" href="mailto:{{ site.email }}" aria-label="Email {{ site.email }}">{% include icon.html name="mail" %}</a></li>
+        {% if site.orcid != "" %}<li><a class="pill-link" href="{{ site.orcid }}">ORCID</a></li>{% endif %}
+        {% if site.linkedin != "" %}<li><a class="pill-link" href="{{ site.linkedin }}">LinkedIn</a></li>{% endif %}
+        {% if site.google_scholar != "" %}<li><a class="pill-link" href="{{ site.google_scholar }}">Scholar</a></li>{% endif %}
+        {% if site.github != "" %}<li><a class="pill-link" href="{{ site.github }}">GitHub</a></li>{% endif %}
+      </ul>
+    </div>
 
+    <div class="hero-main">
+      <span class="accent-bar" aria-hidden="true"></span>
+      <h1>{{ site.name }}</h1>
+      <p class="subtitle">{{ site.role }}</p>
+      <div class="bio">{{ content }}</div>
       <div class="actions">
-        {% if site.show_services %}<a class="button button-primary" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>{% endif %}
-        <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
-        {% if site.cv_pdf and site.cv_pdf != "" %}<a class="button" href="{{ site.cv_pdf | relative_url }}">Download CV</a>{% endif %}
-        <a class="button button-quiet" href="mailto:{{ site.email }}">Email me</a>
+        <a class="button button-primary" href="{{ '/research/' | relative_url }}">View research {% include icon.html name="arrow" %}</a>
+        {% if site.cv_pdf and site.cv_pdf != "" %}
+          <a class="button" href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="download" %} Download CV</a>
+        {% else %}
+          <a class="button" href="{{ '/outputs/' | relative_url }}">View outputs</a>
+        {% endif %}
+        {% if site.show_services %}<a class="button" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>{% endif %}
       </div>
     </div>
-
-    <div class="hero-photo">
-      {% if site.photo and site.photo != "" %}
-        <img src="{{ site.photo | relative_url }}" alt="Photo of {{ site.name }}" width="220" height="220">
-      {% else %}
-        <div class="monogram" aria-hidden="true">{{ site.initials }}</div>
-      {% endif %}
-    </div>
   </div>
-
-  <div class="wrap">
-    <ul class="facts">
-      <li><strong>{{ n_published }}</strong> published papers{% if n_review > 0 %}, <strong>{{ n_review }}</strong> under review{% endif %}</li>
-      {% for item in site.highlights %}<li>{{ item }}</li>{% endfor %}
-    </ul>
-  </div>
-
-  <svg class="hero-curve" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-    <path d="M0 6 H140 V12 H260 V20 H350 V24 H470 V31 H560 V35 H690 V41 H780 V44 H910 V49 H1020 V52 H1200" />
-  </svg>
 </section>
 
-<div class="wrap prose home-prose">
-  {{ content }}
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Research interests</h2>
+      <a class="more" href="{{ '/research/' | relative_url }}">More about my research {% include icon.html name="arrow" %}</a>
+    </div>
+    <div class="grid grid-4">
+      {% for item in site.data.interests %}
+      <article class="card interest">
+        <span class="card-icon">{% include icon.html name=item.icon %}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected projects</h2>
+      <a class="more" href="{{ '/research/' | relative_url }}">All projects {% include icon.html name="arrow" %}</a>
+    </div>
+    <div class="grid grid-3">
+      {% assign featured = site.data.projects | where: "featured", true %}
+      {% for project in featured limit: 3 %}{% include project-card.html project=project %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Recent outputs</h2>
+      <a class="more" href="{{ '/outputs/' | relative_url }}">All outputs {% include icon.html name="arrow" %}</a>
+    </div>
+    {% assign published = site.data.publications | where: "status", "published" | sort: "year" | reverse %}
+    <ol class="outputs">
+      {% for pub in published limit: 3 %}
+      {% capture bold_me %}<strong>{{ me }}</strong>{% endcapture %}
+      <li class="output">
+        <span class="year-pill">{{ pub.year }}</span>
+        <div class="output-text">
+          <h3>{% if pub.doi != "" %}<a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+          <p class="output-authors">{{ pub.authors | replace: me, bold_me }}</p>
+          <p class="output-source"><cite>{{ pub.journal }}</cite>{% if pub.details != "" %}, {{ pub.details }}{% endif %}</p>
+        </div>
+        {% if pub.doi != "" %}<a class="output-arrow" href="https://doi.org/{{ pub.doi }}" aria-label="Read the paper">{% include icon.html name="arrow" %}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Track record</h2>
+      <a class="more" href="{{ '/research/#funding' | relative_url }}">Funding and teaching {% include icon.html name="arrow" %}</a>
+    </div>
+    <div class="grid grid-4">
+      <div class="card stat">
+        <span class="card-icon">{% include icon.html name="book" %}</span>
+        <div>
+          <p class="stat-number">{{ n_published }}</p>
+          <p class="stat-label">Published papers</p>
+          <p class="stat-detail">Journal and conference papers</p>
+        </div>
+      </div>
+      <div class="card stat">
+        <span class="card-icon">{% include icon.html name="pen" %}</span>
+        <div>
+          <p class="stat-number">{{ n_first }}</p>
+          <p class="stat-label">First-author papers</p>
+          <p class="stat-detail">{% if n_review > 0 %}Plus {{ n_review }} under review{% else %}Published{% endif %}</p>
+        </div>
+      </div>
+      {% for item in site.highlights %}
+      <div class="card stat">
+        <span class="card-icon">{% include icon.html name="award" %}</span>
+        <div>
+          <p class="stat-number">{{ item.number }}</p>
+          <p class="stat-label">{{ item.label }}</p>
+          <p class="stat-detail">{{ item.detail }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

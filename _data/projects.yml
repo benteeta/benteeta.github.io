@@ -1,0 +1,53 @@
+# ===============================================================
+# PROJECTS. All appear on the Research page. Projects with
+# "featured: true" also appear on the home page (three fit best).
+#
+#   picture: the small drawing on the card. One of:
+#            interval, bars, events, matrix, gradient, trajectories, network
+#   tags:    one or two short labels, each in quotes
+#
+# To add a project, copy a whole block, paste it, and change the text.
+# Keep the quotes, and the two spaces at the start of each line.
+# ===============================================================
+
+- title: "Heart failure and COPD"
+  featured: true
+  picture: interval
+  summary: "How often COPD is recorded before heart failure, how long the gap is between the two diagnoses, and which factors are associated with a longer interval. A paper on the diagnostic interval is under review."
+  tags: ["Multimorbidity", "CPRD"]
+
+- title: "Falls in heart failure"
+  featured: true
+  picture: bars
+  summary: "Interpretable machine-learning models that predict falls in people with heart failure, with risk that updates as the record changes. Healthcare professionals, patients and carers shaped how risk and uncertainty are shown. Funded by an EPSRC LEAP fellowship."
+  tags: ["Machine learning", "Heart failure"]
+
+- title: "Respiratory infections in heart failure and COPD"
+  featured: true
+  picture: events
+  summary: "Infection episodes in primary care, infection-related hospital admissions and antibiotic prescribing in people with heart failure, COPD or both, compared with a matched cohort from the general population."
+  tags: ["Infections", "Prescribing"]
+
+- title: "Cardiovascular disease before cancer"
+  featured: false
+  picture: matrix
+  summary: "Cardiovascular disease and other long-term conditions recorded before a cancer diagnosis, compared across cancer sites."
+  tags: ["Cardio-oncology", "Multimorbidity"]
+
+- title: "Visualising health inequalities for the NHS"
+  featured: false
+  picture: gradient
+  summary: "Data-visualisation methods for population health management of inequalities in cancer and cardiovascular disease outcomes. An HDR UK South West seedcorn project."
+  tags: ["Inequalities", "Visualisation"]
+
+- title: "COVID-19 in intensive care"
+  featured: false
+  picture: trajectories
+  summary: "Mixed-effects and survival models of blood biomarker trajectories by vaccination status, and their association with mortality, in an intensive care cohort from Songklanagarind Hospital, Thailand."
+  tags: ["Longitudinal data", "Survival analysis"]
+
+- title: "Digital twins for routine care"
+  featured: false
+  picture: network
+  summary: "A conceptual framework for building healthcare digital twins from routinely collected population data, focused on clinical events, specific decisions, and models that work equally well across patient groups. Under review."
+  tags: ["Digital twins", "Decision support"]

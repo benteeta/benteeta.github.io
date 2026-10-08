@@ -1,0 +1,10 @@
+{% comment %} One project card. Content comes from _data/projects.yml {% endcomment %}
+{% assign project = include.project %}
+<article class="card project">
+  <div class="project-picture">{% include picture.html name=project.picture %}</div>
+  <div class="project-body">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.summary }}</p>
+    {% if project.tags %}<ul class="tags">{% for t in project.tags %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</article>

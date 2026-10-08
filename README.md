@@ -26,14 +26,20 @@ Every change works the same way:
 
 | To change... | Edit this file |
 |---|---|
-| Your name, job title, email, profile links, the facts under your name | `_config.yml` |
-| Home page text | `index.md` |
-| Research page (projects, methods, funding, talks, teaching) | `research.md` |
-| The list of publications | `_data/publications.yml` |
+| Your name, job title, email, profile links, funding cards | `_config.yml` |
+| The paragraph under your name on the home page | `index.md` |
+| The four research interest cards | `_data/interests.yml` |
+| Projects (Research page, and home page if `featured: true`) | `_data/projects.yml` |
+| Methods, funding, talks, teaching, education | `research.md` |
+| The list of outputs | `_data/publications.yml` |
 | The "Work with me" page | `work-with-me.md` |
 | Colours | `assets/style.css` (the two blocks at the top) |
 
 You should not need to edit anything in `_layouts`, `_includes` or `assets/publications.js`.
+
+The home page counts your published and first-author papers from
+`_data/publications.yml`, and shows the three newest published papers.
+Those update by themselves when you add a paper.
 
 ### Add a new paper
 
@@ -58,7 +64,6 @@ above the first paper, then change the text:
   Current labels: Heart failure and multimorbidity; Machine learning and digital health;
   Environmental health; Spatial analysis; Neonatal health.
 
-The publication counts on the home page and the first-author filter update by themselves.
 
 ### Add your photo
 

@@ -1,38 +1,10 @@
 ---
-layout: page
+layout: research
 title: Research
-description: "Current projects, methods, funding, talks and teaching."
+description: "I use routinely collected health records to study long-term conditions that occur together. Most current projects use CPRD primary care records linked to hospital, mortality and deprivation data."
 ---
 
-My work uses routinely collected health records to study long-term conditions that occur together. Most current projects use CPRD primary care records linked to hospital, mortality and deprivation data.
-
-## Current projects
-
-### Heart failure and COPD
-
-How often COPD is recorded before heart failure, how long the gap is between the two diagnoses, and which factors are associated with a longer interval. The project also estimates incidence and follows disease trajectories after diagnosis, comparing groups of patients. A paper on the diagnostic interval is under review.
-
-### Falls in heart failure
-
-Interpretable machine-learning models that predict falls in people with heart failure in primary care, with risk estimates that update as the record changes. Healthcare professionals, patients and carers helped decide how risk, uncertainty and model explanations should be shown. Funded by an EPSRC LEAP Digital Health Hub fellowship and presented at the Society for Academic Primary Care meeting in 2026.
-
-### Respiratory infections in heart failure and COPD
-
-Infection episodes managed in primary care, infection-related hospital admissions and antibiotic prescribing in people with heart failure, COPD or both, compared with a matched cohort from the general population.
-
-### Cardiovascular disease before cancer
-
-Cardiovascular disease and other long-term conditions recorded before a cancer diagnosis, compared across cancer sites.
-
-### COVID-19 in intensive care
-
-Mixed-effects and survival models of blood biomarker trajectories by vaccination status, and their association with mortality, in an intensive care cohort from Songklanagarind Hospital, Thailand.
-
-### Digital twins for routine care
-
-A conceptual framework for building healthcare digital twins from routinely collected population data. It focuses on modelling clinical events, targeting specific decisions, and checking that models work equally well across patient groups. Under review.
-
-### Earlier work
+## Earlier work
 
 Changes in blood, liver and kidney markers among clean-up workers over five years after the 2013 Rayong oil spill in Thailand (my PhD); air pollution and land-surface temperature trends; leprosy surveillance in southern Thailand; and neonatal mortality at a teaching hospital in Kumasi, Ghana.
 
@@ -64,6 +36,12 @@ Changes in blood, liver and kidney markers among clean-up workers over five year
 - Two master's students I mentored published their projects: PM2.5 and PM10 prediction in Chiang Mai, and land-surface temperature in Bali.
 - Tutor, University of Exeter Medical School: the patient experience of multimorbidity (2025 and 2026).
 - Instructor, NIH-supported workshop on data science and machine learning for TB research in Southeast Asia (2021).
+
+## Education
+
+- PhD, Research Methodology, Prince of Songkla University, Thailand (2019 to 2023). Thesis: statistical analysis of the long-term health effects of Thailand's oil spill on clean-up workers.
+- MSc, Applied Mathematics, Prince of Songkla University, Thailand (2014 to 2018). Dissertation: modelling neonatal mortality at the intensive care unit of a teaching hospital in Ghana.
+- BSc (Hons), Mathematics, Kwame Nkrumah University of Science and Technology, Ghana (2009 to 2013).
 
 ## Memberships
 

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% comment %} Projects come from _data/projects.yml. The rest of the page is research.md {% endcomment %}
+<header class="page-head">
+  <div class="wrap">
+    <span class="accent-bar" aria-hidden="true"></span>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>Current projects</h2></div>
+    <div class="grid grid-2">
+      {% for project in site.data.projects %}{% include project-card.html project=project %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="wrap prose">
+  {{ content }}
+</div>

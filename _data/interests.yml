@@ -1,0 +1,21 @@
+# ===============================================================
+# RESEARCH INTEREST CARDS on the home page. Four fit best.
+#   icon: people, heart, chart or database
+# Keep the quotes around the text.
+# ===============================================================
+
+- title: "Multimorbidity"
+  icon: people
+  text: "How heart failure, COPD, cancer and other long-term conditions occur together, in what order, and what that means for patients."
+
+- title: "Cardiovascular and respiratory epidemiology"
+  icon: heart
+  text: "Incidence, timing of diagnosis and outcomes of heart failure and COPD in national linked primary care records."
+
+- title: "Interpretable machine learning"
+  icon: chart
+  text: "Prediction models that are calibrated, checked across patient groups, and explained in ways clinicians and patients helped design."
+
+- title: "Digital health"
+  icon: database
+  text: "Using routinely collected records for clinical decision support and for digital twins of patient care."
