@@ -1,0 +1,61 @@
+# ===============================================================
+# SITE SETTINGS
+# Change the text inside the quotes, then click "Commit changes".
+# GitHub rebuilds the site by itself in 1 to 2 minutes.
+# Keep the quotes, and keep the spaces at the start of indented lines.
+# ===============================================================
+
+name: "Dr Benjamin Atta Owusu"
+initials: "BAO"
+role: "Postdoctoral Research Fellow"
+tagline: "Health data scientist and epidemiologist. I study heart failure and the conditions that come with it, using linked routine health records."
+organisation: "Exeter Collaboration for Academic Primary Care (APEx), University of Exeter"
+email: "b.owusu@exeter.ac.uk"
+
+# How your name appears in author lists. It is shown in bold, and
+# papers whose author list starts with it count as first-author papers.
+name_in_papers: "Owusu BA"
+
+# Photo: upload a square photo into the assets folder, then type its
+# path here, for example "/assets/photo.jpg". Until then your
+# initials are shown instead.
+photo: ""
+
+# CV: upload a PDF into the assets folder, then type its path here,
+# for example "/assets/cv.pdf". A "Download CV" button then appears.
+cv_pdf: ""
+
+# Profile links. Paste the full address, or leave "" to hide the link.
+orcid: ""
+google_scholar: ""
+linkedin: ""
+github: "https://github.com/benteeta"
+
+# Short facts shown under your name on the home page.
+# Publication counts are added automatically from _data/publications.yml.
+highlights:
+  - "Lead applicant, £55,000 EPSRC LEAP Digital Health Hub fellowship"
+  - "Graduate Statistician (GradStat), Royal Statistical Society"
+
+# Set to true to show the "Work with me" menu link and home-page button.
+# Check the University of Exeter's policy on outside work first.
+show_services: false
+
+
+# ===============================================================
+# TECHNICAL SETTINGS. No need to change anything below this line.
+# ===============================================================
+
+title: "Benjamin Atta Owusu"
+description: "Health data scientist and epidemiologist at the University of Exeter, working on heart failure, multimorbidity and linked routine health data."
+author: "Benjamin Atta Owusu"
+url: "https://benteeta.github.io"
+baseurl: ""
+lang: "en_GB"
+permalink: pretty
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - README.md

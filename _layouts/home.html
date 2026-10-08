@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% comment %} Count papers from _data/publications.yml so the numbers never go out of date. {% endcomment %}
+{% assign n_published = 0 %}
+{% assign n_review = 0 %}
+{% for pub in site.data.publications %}
+  {% if pub.status == "under review" %}
+    {% assign n_review = n_review | plus: 1 %}
+  {% else %}
+    {% assign n_published = n_published | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ site.role }}</p>
+      <h1>{{ site.name }}</h1>
+      <p class="tagline">{{ site.tagline }}</p>
+      <p class="org">{{ site.organisation }}</p>
+
+      <div class="actions">
+        {% if site.show_services %}<a class="button button-primary" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>{% endif %}
+        <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
+        {% if site.cv_pdf and site.cv_pdf != "" %}<a class="button" href="{{ site.cv_pdf | relative_url }}">Download CV</a>{% endif %}
+        <a class="button button-quiet" href="mailto:{{ site.email }}">Email me</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      {% if site.photo and site.photo != "" %}
+        <img src="{{ site.photo | relative_url }}" alt="Photo of {{ site.name }}" width="220" height="220">
+      {% else %}
+        <div class="monogram" aria-hidden="true">{{ site.initials }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="facts">
+      <li><strong>{{ n_published }}</strong> published papers{% if n_review > 0 %}, <strong>{{ n_review }}</strong> under review{% endif %}</li>
+      {% for item in site.highlights %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <svg class="hero-curve" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M0 6 H140 V12 H260 V20 H350 V24 H470 V31 H560 V35 H690 V41 H780 V44 H910 V49 H1020 V52 H1200" />
+  </svg>
+</section>
+
+<div class="wrap prose home-prose">
+  {{ content }}
+</div>

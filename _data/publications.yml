@@ -1,0 +1,110 @@
+# ===============================================================
+# PUBLICATIONS
+# One block per paper. Put new papers at the top of their group.
+#
+# To add a paper: copy a whole block, from "- title:" down to
+# "topics:", paste it above the first block, and change the text.
+#
+#   status:   published   or   under review
+#   journal:  journal or conference name (not needed while under review)
+#   year:     year of publication (not needed while under review)
+#   details:  volume(issue):pages, or "" if there are none
+#   doi:      the part after https://doi.org/ , or "" if there is none
+#   topics:   one or more labels, each in quotes, separated by commas.
+#             Reuse an existing label so the filter groups papers together.
+#
+# Keep the quotes around titles and authors. Titles often contain
+# colons, and a colon outside quotes breaks this file.
+# Keep the two spaces at the start of each line under "- title:".
+# ===============================================================
+
+# ---------- Under review ----------
+
+- title: "Developing healthcare digital twins from routinely collected population data: a conceptual framework for event-driven, decision-targeted, and equitable implementation"
+  authors: "Owusu BA, Pealing L, Aishwaryaprajna, Estévez SR, van der Schaar M, Kadam UT"
+  status: under review
+  topics: ["Machine learning and digital health"]
+
+- title: "Factors influencing COPD-to-heart failure diagnostic time intervals in onset of multimorbidity: a national cohort study"
+  authors: "Owusu BA, Pealing L, Martins T, Aishwaryaprajna, Kulkani, Kadam UT"
+  status: under review
+  topics: ["Heart failure and multimorbidity"]
+
+- title: "From prediction to decision support: an HCI-informed framework for machine learning prediction using a falls exemplar"
+  authors: "Owusu BA, Nielsen EE, Aishwaryaprajna, Kadam UT"
+  status: under review
+  topics: ["Machine learning and digital health", "Heart failure and multimorbidity"]
+
+# ---------- Published ----------
+
+- title: "Spatiotemporal patterns of leprosy in Southern Thailand: identifying high-burden districts over 25 years"
+  authors: "Muwannasing D, Owusu BA, Tongkumchum P, Pongsiri N, Ammatawiyanon L, Poolsawat P"
+  status: published
+  journal: "Spatial and Spatio-temporal Epidemiology"
+  year: 2025
+  details: "55:100766"
+  doi: "10.1016/j.sste.2025.100766"
+  topics: ["Spatial analysis"]
+
+- title: "Trend and association between particulate matters and meteorological factors: a prospect for prediction of PM2.5 in Southern Thailand"
+  authors: "Lim A, Owusu BA, Thongrod T, Khurram H, Pongsiri N, Ingviya T, Buya S"
+  status: published
+  journal: "Polish Journal of Environmental Studies"
+  year: 2025
+  details: "34(5)"
+  doi: ""
+  topics: ["Environmental health"]
+
+- title: "Spatial and temporal patterns of land surface temperature in Greenland from 2000-2019"
+  authors: "Pongsiri N, McNeil R, Saelim R, Owusu BA, Chuai-Aree S"
+  status: published
+  journal: "Mausam"
+  year: 2024
+  details: "75(2):543-550"
+  doi: "10.54302/mausam.v75i2.6099"
+  topics: ["Spatial analysis"]
+
+- title: "Latent trajectories of haematological, hepatic and renal profiles after oil spill exposure: a longitudinal analysis"
+  authors: "Owusu BA, Lim A, Pongsiri N, Intawong C, Rheanpumikankit S, Suksri S, Ingviya T"
+  status: published
+  journal: "International Journal of Environmental Research and Public Health"
+  year: 2023
+  details: "20(4):2871"
+  doi: "10.3390/ijerph20042871"
+  topics: ["Environmental health"]
+
+- title: "Haematological, renal and hepatic function changes among Rayong oil spill clean-up workers: a longitudinal study"
+  authors: "Owusu BA, Lim A, Intawong C, Rheanpumikankit S, Suksri S, Ingviya T"
+  status: published
+  journal: "International Archives of Occupational and Environmental Health"
+  year: 2022
+  details: "95(7):1481-1489"
+  doi: "10.1007/s00420-022-01834-y"
+  topics: ["Environmental health"]
+
+- title: "Analysis of land surface temperature with land use and land cover and elevation from NASA MODIS satellite data: a case study of Bali, Indonesia"
+  authors: "Buya S, Chuangchang P, Owusu BA"
+  status: published
+  journal: "Environmental Monitoring and Assessment"
+  year: 2022
+  details: "194(8):566"
+  doi: "10.1007/s10661-022-10252-z"
+  topics: ["Spatial analysis"]
+
+- title: "Prediction of PM2.5 and PM10 in Chiang Mai Province: a comparison of machine learning models"
+  authors: "Thongrod T, Lim A, Ingviya T, Owusu BA"
+  status: published
+  journal: "37th International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), IEEE"
+  year: 2022
+  details: "1-4"
+  doi: ""
+  topics: ["Environmental health", "Machine learning and digital health"]
+
+- title: "Neonatal mortality at the neonatal unit: the situation at a teaching hospital in Ghana"
+  authors: "Owusu BA, Lim A, Makaje N, Wobil P, SameAe A"
+  status: published
+  journal: "African Health Sciences"
+  year: 2018
+  details: "18(2):369-377"
+  doi: "10.4314/ahs.v18i2.22"
+  topics: ["Neonatal health"]

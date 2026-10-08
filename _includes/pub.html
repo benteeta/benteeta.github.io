@@ -1,0 +1,19 @@
+{% comment %} One publication. Used by the publications page. {% endcomment %}
+{% assign p = include.pub %}
+{% assign my_name = site.name_in_papers %}
+{% assign name_length = my_name | size %}
+{% assign lead_author = p.authors | slice: 0, name_length %}
+{% capture bold_name %}<strong>{{ my_name }}</strong>{% endcapture %}
+<article class="pub" data-topics="{{ p.topics | join: '|' | escape }}" data-first="{% if lead_author == my_name %}1{% else %}0{% endif %}">
+  <h3 class="pub-title">
+    {% if p.doi and p.doi != "" %}<a href="https://doi.org/{{ p.doi }}">{{ p.title | escape }}</a>{% else %}{{ p.title | escape }}{% endif %}
+  </h3>
+  <p class="pub-authors">{{ p.authors | escape | replace: my_name, bold_name }}</p>
+  <p class="pub-source">
+    {% if p.status == "under review" %}Manuscript under review{% else %}<cite>{{ p.journal | escape }}</cite>. {{ p.year }}{% if p.details and p.details != "" %};{{ p.details }}{% endif %}.{% endif %}
+    {% if p.doi and p.doi != "" %}<a class="doi" href="https://doi.org/{{ p.doi }}">doi:{{ p.doi }}</a>{% endif %}
+  </p>
+  {% if p.topics %}
+  <ul class="tags" aria-label="Topics">{% for t in p.topics %}<li>{{ t | escape }}</li>{% endfor %}</ul>
+  {% endif %}
+</article>

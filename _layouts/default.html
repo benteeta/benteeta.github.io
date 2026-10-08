@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.name }}</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>Research</a>
+        <a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a>
+        {% if site.show_services %}<a href="{{ '/work-with-me/' | relative_url }}"{% if page.url == '/work-with-me/' %} aria-current="page"{% endif %}>Work with me</a>{% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">{{ site.name }}</p>
+        <p>{{ site.organisation }}</p>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+      <ul class="profile-links" aria-label="Profiles">
+        {% if site.orcid and site.orcid != "" %}<li><a href="{{ site.orcid }}">ORCID</a></li>{% endif %}
+        {% if site.google_scholar and site.google_scholar != "" %}<li><a href="{{ site.google_scholar }}">Google Scholar</a></li>{% endif %}
+        {% if site.linkedin and site.linkedin != "" %}<li><a href="{{ site.linkedin }}">LinkedIn</a></li>{% endif %}
+        {% if site.github and site.github != "" %}<li><a href="{{ site.github }}">GitHub</a></li>{% endif %}
+      </ul>
+    </div>
+    <div class="wrap footer-meta">
+      <p>Last updated {{ site.time | date: "%-d %B %Y" }}</p>
+    </div>
+  </footer>
+</body>
+</html>

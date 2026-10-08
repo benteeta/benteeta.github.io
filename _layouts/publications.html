@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{% comment %}
+  This page is built from _data/publications.yml.
+  To change the list, edit that file, not this one.
+{% endcomment %}
+{% assign n_total = site.data.publications | size %}
+
+<header class="page-head">
+  <div class="wrap">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    <div class="prose">{{ content }}</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="pub-tools" id="pub-tools" hidden>
+    <div class="chips" role="group" aria-label="Filter by topic" id="pub-chips"></div>
+    <div class="pub-controls">
+      <label class="search">
+        <span class="visually-hidden">Search publications</span>
+        <input type="search" id="pub-search" placeholder="Search titles, authors or journals" autocomplete="off">
+      </label>
+      <label class="check">
+        <input type="checkbox" id="pub-first"> First-author papers only
+      </label>
+    </div>
+    <p class="pub-count" id="pub-count" aria-live="polite">Showing {{ n_total }} of {{ n_total }}</p>
+  </div>
+
+  <div class="pub-list" id="pub-list">
+    {% assign under_review = site.data.publications | where: "status", "under review" %}
+    {% if under_review.size > 0 %}
+    <section class="pub-group">
+      <h2 class="pub-group-title">Under review</h2>
+      {% for pub in under_review %}{% include pub.html pub=pub %}{% endfor %}
+    </section>
+    {% endif %}
+
+    {% assign years = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+    {% for group in years %}
+      {% assign year_label = group.name | append: "" %}
+      {% if year_label != "" %}
+      <section class="pub-group">
+        <h2 class="pub-group-title">{{ year_label }}</h2>
+        {% for pub in group.items %}
+          {% unless pub.status == "under review" %}{% include pub.html pub=pub %}{% endunless %}
+        {% endfor %}
+      </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <p class="no-results" id="pub-empty" hidden>No publications match. Try another topic or clear the search.</p>
+
+  {% if site.google_scholar != "" or site.orcid != "" %}
+  <p class="more-links">Also listed on
+    {% if site.google_scholar != "" %}<a href="{{ site.google_scholar }}">Google Scholar</a>{% endif %}{% if site.google_scholar != "" and site.orcid != "" %} and {% endif %}{% if site.orcid != "" %}<a href="{{ site.orcid }}">ORCID</a>{% endif %}.
+  </p>
+  {% endif %}
+</div>
+
+<script src="{{ '/assets/publications.js' | relative_url }}" defer></script>
