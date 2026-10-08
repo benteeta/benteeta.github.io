@@ -30,7 +30,8 @@ Every change works the same way:
 | The paragraph under your name on the home page | `index.md` |
 | The four research interest cards | `_data/interests.yml` |
 | Projects (Research page, and home page if `featured: true`) | `_data/projects.yml` |
-| Methods, funding, talks, teaching, education | `research.md` |
+| About me page (career, education, teaching, memberships) | `about.md` |
+| Research page text: the opening paragraph (above the line `<!-- PROJECTS -->`), then earlier work, methods, funding and talks | `research.md` |
 | The list of research outputs (published work only) | `_data/publications.yml` |
 | The "Work with me" page | `work-with-me.md` |
 | Colours | `assets/style.css` (the two blocks at the top) |

@@ -1,16 +1,26 @@
 ---
 layout: default
 ---
-{% comment %} Projects come from _data/projects.yml. The rest of the page is research.md {% endcomment %}
+{% comment %}
+  research.md is split at the line <!-- PROJECTS -->.
+  Text above that line opens the page. The project cards
+  (from _data/projects.yml) come next, then the text below the line.
+{% endcomment %}
+{% assign parts = content | split: "<!-- PROJECTS -->" %}
 <header class="page-head">
   <div class="wrap">
     <span class="accent-bar" aria-hidden="true"></span>
     <h1>{{ page.title }}</h1>
-    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
   </div>
 </header>
 
-<section class="section">
+{% if parts.size > 1 %}
+<div class="wrap prose intro">
+  {{ parts[0] }}
+</div>
+{% endif %}
+
+<section class="section section-tight">
   <div class="wrap">
     <div class="section-head"><h2>Current projects</h2></div>
     <div class="grid grid-2">
@@ -20,5 +30,5 @@ layout: default
 </section>
 
 <div class="wrap prose">
-  {{ content }}
+  {% if parts.size > 1 %}{{ parts[1] }}{% else %}{{ content }}{% endif %}
 </div>

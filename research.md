@@ -1,8 +1,12 @@
 ---
 layout: research
 title: Research
-description: "I use routinely collected health records to study long-term conditions that occur together. Most current projects use CPRD primary care records linked to hospital, mortality and deprivation data."
+description: "Multimorbidity and clinical outcomes in linked electronic health records: heart failure, COPD, respiratory infections, falls and cardiovascular disease in people with cancer."
 ---
+
+My research examines multimorbidity and clinical outcomes using linked electronic health records. I study heart failure, chronic obstructive pulmonary disease, respiratory infections, falls, and cardiovascular disease in people with cancer. I combine epidemiological methods, statistical modelling, and machine learning to describe disease trajectories, estimate risk, and assess inequalities. My methodological interests include missingness, changes in clinical recording, explainability, and uncertainty in prediction. I also develop conceptual frameworks for human–computer interaction and event-driven digital twins. These frameworks examine how changing patient information can update risk estimates and how clinicians and patients can interpret predictions when making decisions about treatment and care.
+
+<!-- PROJECTS -->
 
 ## Earlier work
 
@@ -29,21 +33,3 @@ Changes in blood, liver and kidney markers among clean-up workers over five year
 - 2026. Using HCI methods to inform machine-learning models in heart-failure care: a stakeholder engagement process. Oral presentation, Society for Academic Primary Care Annual Scientific Meeting, St Andrews.
 - 2021. Adverse health effects of oil spill exposure on first responders of the Rayong oil spill. International Conference on Mathematics, Statistics and their Applications, Thailand.
 - 2015 to 2016. Three talks on neonatal mortality at a teaching hospital in Kumasi, Ghana, given in Thailand and Malaysia.
-
-## Teaching and supervision
-
-- Currently supervising one PhD student and two MSc projects. Three earlier MSc projects completed, all with distinction.
-- Two master's students I mentored published their projects: PM2.5 and PM10 prediction in Chiang Mai, and land-surface temperature in Bali.
-- Tutor, University of Exeter Medical School: the patient experience of multimorbidity (2025 and 2026).
-- Instructor, NIH-supported workshop on data science and machine learning for TB research in Southeast Asia (2021).
-
-## Education
-
-- PhD, Research Methodology, Prince of Songkla University, Thailand (2019 to 2023). Thesis: statistical analysis of the long-term health effects of Thailand's oil spill on clean-up workers.
-- MSc, Applied Mathematics, Prince of Songkla University, Thailand (2014 to 2018). Dissertation: modelling neonatal mortality at the intensive care unit of a teaching hospital in Ghana.
-- BSc (Hons), Mathematics, Kwame Nkrumah University of Science and Technology, Ghana (2009 to 2013).
-
-## Memberships
-
-- Graduate Statistician (GradStat), Royal Statistical Society, since 2026
-- Society for Academic Primary Care, since 2025

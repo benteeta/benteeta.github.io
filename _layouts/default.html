@@ -13,8 +13,9 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.short_name | default: site.name }}</a>
       <nav class="site-nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About me</a>
         <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>Research</a>
         <a href="{{ '/outputs/' | relative_url }}"{% if page.url == '/outputs/' %} aria-current="page"{% endif %}>Research Outputs</a>
         {% if site.show_services %}<a href="{{ '/work-with-me/' | relative_url }}"{% if page.url == '/work-with-me/' %} aria-current="page"{% endif %}>Work with me</a>{% endif %}
