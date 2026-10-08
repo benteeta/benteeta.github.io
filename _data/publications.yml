@@ -1,13 +1,13 @@
 # ===============================================================
 # PUBLICATIONS
-# One block per paper. Put new papers at the top of their group.
+# Published work only. One block per paper, newest first.
 #
 # To add a paper: copy a whole block, from "- title:" down to
 # "topics:", paste it above the first block, and change the text.
 #
-#   status:   published   or   under review
-#   journal:  journal or conference name (not needed while under review)
-#   year:     year of publication (not needed while under review)
+#   status:   published
+#   journal:  journal or conference name
+#   year:     year of publication
 #   details:  volume(issue):pages, or "" if there are none
 #   doi:      the part after https://doi.org/ , or "" if there is none
 #   topics:   one or more labels, each in quotes, separated by commas.
@@ -17,25 +17,6 @@
 # colons, and a colon outside quotes breaks this file.
 # Keep the two spaces at the start of each line under "- title:".
 # ===============================================================
-
-# ---------- Under review ----------
-
-- title: "Developing healthcare digital twins from routinely collected population data: a conceptual framework for event-driven, decision-targeted, and equitable implementation"
-  authors: "Owusu BA, Pealing L, Aishwaryaprajna, Estévez SR, van der Schaar M, Kadam UT"
-  status: under review
-  topics: ["Machine learning and digital health"]
-
-- title: "Factors influencing COPD-to-heart failure diagnostic time intervals in onset of multimorbidity: a national cohort study"
-  authors: "Owusu BA, Pealing L, Martins T, Aishwaryaprajna, Kulkani, Kadam UT"
-  status: under review
-  topics: ["Heart failure and multimorbidity"]
-
-- title: "From prediction to decision support: an HCI-informed framework for machine learning prediction using a falls exemplar"
-  authors: "Owusu BA, Nielsen EE, Aishwaryaprajna, Kadam UT"
-  status: under review
-  topics: ["Machine learning and digital health", "Heart failure and multimorbidity"]
-
-# ---------- Published ----------
 
 - title: "Spatiotemporal patterns of leprosy in Southern Thailand: identifying high-burden districts over 25 years"
   authors: "Muwannasing D, Owusu BA, Tongkumchum P, Pongsiri N, Ammatawiyanon L, Poolsawat P"

@@ -57,7 +57,7 @@ layout: default
         {% if site.cv_pdf and site.cv_pdf != "" %}
           <a class="button" href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="download" %} Download CV</a>
         {% else %}
-          <a class="button" href="{{ '/outputs/' | relative_url }}">View outputs</a>
+          <a class="button" href="{{ '/outputs/' | relative_url }}">View research outputs</a>
         {% endif %}
         {% if site.show_services %}<a class="button" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>{% endif %}
       </div>
@@ -99,8 +99,8 @@ layout: default
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Recent outputs</h2>
-      <a class="more" href="{{ '/outputs/' | relative_url }}">All outputs {% include icon.html name="arrow" %}</a>
+      <h2>Recent research outputs</h2>
+      <a class="more" href="{{ '/outputs/' | relative_url }}">All research outputs {% include icon.html name="arrow" %}</a>
     </div>
     {% assign published = site.data.publications | where: "status", "published" | sort: "year" | reverse %}
     <ol class="outputs">
@@ -140,7 +140,7 @@ layout: default
         <div>
           <p class="stat-number">{{ n_first }}</p>
           <p class="stat-label">First-author papers</p>
-          <p class="stat-detail">{% if n_review > 0 %}Plus {{ n_review }} under review{% else %}Published{% endif %}</p>
+          <p class="stat-detail">As lead author</p>
         </div>
       </div>
       {% for item in site.highlights %}

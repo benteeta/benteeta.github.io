@@ -31,7 +31,7 @@ Every change works the same way:
 | The four research interest cards | `_data/interests.yml` |
 | Projects (Research page, and home page if `featured: true`) | `_data/projects.yml` |
 | Methods, funding, talks, teaching, education | `research.md` |
-| The list of outputs | `_data/publications.yml` |
+| The list of research outputs (published work only) | `_data/publications.yml` |
 | The "Work with me" page | `work-with-me.md` |
 | Colours | `assets/style.css` (the two blocks at the top) |
 
@@ -58,8 +58,7 @@ above the first paper, then change the text:
 ```
 
 - Keep the quotes, and keep two spaces at the start of each line after `- title:`.
-- For a paper under review, write `status: under review` and leave out journal, year, details and doi.
-- When a paper is accepted, change `under review` to `published` and add journal, year, details and doi.
+- Only add a paper once it is published.
 - Use an existing topic label where you can, so the filter groups papers together.
   Current labels: Heart failure and multimorbidity; Machine learning and digital health;
   Environmental health; Spatial analysis; Neonatal health.

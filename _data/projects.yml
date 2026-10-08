@@ -13,7 +13,7 @@
 - title: "Heart failure and COPD"
   featured: true
   picture: interval
-  summary: "How often COPD is recorded before heart failure, how long the gap is between the two diagnoses, and which factors are associated with a longer interval. A paper on the diagnostic interval is under review."
+  summary: "How often COPD is recorded before heart failure, how long the gap is between the two diagnoses, and which factors are associated with a longer interval."
   tags: ["Multimorbidity", "CPRD"]
 
 - title: "Falls in heart failure"
@@ -49,5 +49,5 @@
 - title: "Digital twins for routine care"
   featured: false
   picture: network
-  summary: "A conceptual framework for building healthcare digital twins from routinely collected population data, focused on clinical events, specific decisions, and models that work equally well across patient groups. Under review."
+  summary: "A conceptual framework for building healthcare digital twins from routinely collected population data, focused on clinical events, specific decisions, and models that work equally well across patient groups."
   tags: ["Digital twins", "Decision support"]
