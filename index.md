@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Home
+title: "Benjamin Atta Owusu"
+description: "Health data scientist and epidemiologist at the University of Exeter, working on heart failure, multimorbidity and linked routine health records."
 ---
 
 I work with CPRD primary care records linked to hospital admissions, death registrations and area deprivation. Most of my questions are about heart failure in people who already live with other long-term conditions, such as COPD.

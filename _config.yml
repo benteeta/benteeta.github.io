@@ -8,7 +8,7 @@
 name: "Dr Benjamin Atta Owusu"
 initials: "BAO"
 role: "Postdoctoral Research Fellow"
-tagline: "Health data scientist and epidemiologist. I study heart failure and the conditions that come with it, using linked routine health records."
+hero_tagline: "Health data scientist and epidemiologist. I study heart failure and the conditions that come with it, using linked routine health records."
 organisation: "Exeter Collaboration for Academic Primary Care (APEx), University of Exeter"
 email: "b.owusu@exeter.ac.uk"
 
@@ -47,7 +47,7 @@ show_services: false
 # ===============================================================
 
 title: "Benjamin Atta Owusu"
-description: "Health data scientist and epidemiologist at the University of Exeter, working on heart failure, multimorbidity and linked routine health data."
+description: "Health data scientist and epidemiologist, University of Exeter"
 author: "Benjamin Atta Owusu"
 url: "https://benteeta.github.io"
 baseurl: ""
