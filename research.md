@@ -23,13 +23,13 @@ Changes in blood, liver and kidney markers among clean-up workers over five year
 
 ## Funding
 
-- 2025. HDR UK South West Seedcorn Funding, £14,000 (co-applicant). Data-visualisation methods for population health management of inequalities in cancer and cardiovascular disease outcomes.
-- 2024. EPSRC LEAP Digital Health Hub Solo Fellowship, £55,000 (lead applicant). Predicting falls and hip fractures from routinely collected care data, with uncertainty quantification and digital twin methods.
-- 2014 to 2022. Graduate scholarships and thesis grants from Prince of Songkla University and the Thailand Education Hub.
+- 2025: HDR UK South West Seedcorn Funding, £14,000 (co-applicant). Data-visualisation methods for population health management of inequalities in cancer and cardiovascular disease outcomes.
+- 2024: EPSRC LEAP Digital Health Hub Solo Fellowship, £55,000 (lead applicant). Predicting falls and hip fractures from routinely collected care data, with uncertainty quantification and digital twin methods.
+- 2014 to 2022: Graduate scholarships and thesis grants from Prince of Songkla University and the Thailand Education Hub.
 
 ## Talks
 
-- 2026. Explainable machine-learning models for predicting falls in the primary-care heart failure population: a database cohort study. Oral presentation, Society for Academic Primary Care Annual Scientific Meeting, St Andrews.
-- 2026. Using HCI methods to inform machine-learning models in heart-failure care: a stakeholder engagement process. Oral presentation, Society for Academic Primary Care Annual Scientific Meeting, St Andrews.
-- 2021. Adverse health effects of oil spill exposure on first responders of the Rayong oil spill. International Conference on Mathematics, Statistics and their Applications, Thailand.
-- 2015 to 2016. Three talks on neonatal mortality at a teaching hospital in Kumasi, Ghana, given in Thailand and Malaysia.
+- 2026: Explainable machine-learning models for predicting falls in the primary-care heart failure population: a database cohort study. Oral presentation, Society for Academic Primary Care Annual Scientific Meeting, St Andrews.
+- 2026: Using HCI methods to inform machine-learning models in heart-failure care: a stakeholder engagement process. Oral presentation, Society for Academic Primary Care Annual Scientific Meeting, St Andrews.
+- 2021: Adverse health effects of oil spill exposure on first responders of the Rayong oil spill. International Conference on Mathematics, Statistics and their Applications, Thailand.
+- 2015 to 2016: Three talks on neonatal mortality at a teaching hospital in Kumasi, Ghana, given in Thailand and Malaysia.

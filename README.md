@@ -81,6 +81,14 @@ Check the university's policy on outside work before you do.
 
 ---
 
+### Lists that start with a year
+
+Write the year with a colon, like `- 2026: Title of the talk`.
+A year followed by a full stop (`- 2026. Title`) turns into a numbered
+list and the year disappears.
+
+---
+
 ## If the site does not update
 
 Open the **Actions** tab. A red cross means the last change broke the build.
