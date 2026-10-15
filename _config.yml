@@ -41,6 +41,12 @@ highlights:
     label: "HDR UK South West seedcorn"
     detail: "Co-applicant, 2025"
 
+# Enquiry form on the Contact page. Leave "" and the form opens the
+# visitor's email app instead. To receive messages straight to your inbox,
+# follow "Set up the enquiry form" in README.md, then paste your form ID
+# here, for example form_id: "xyzabcd1".
+form_id: ""
+
 # Set to true to show the "Work with me" menu link and home-page button.
 # Check the University of Exeter's policy on outside work first.
 show_services: false
