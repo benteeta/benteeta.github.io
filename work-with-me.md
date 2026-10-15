@@ -33,4 +33,4 @@ If the audit shows more work is needed, I can take on a defined piece of it: a s
 
 ## Get in touch
 
-Email [{{ site.email }}](mailto:{{ site.email }}) with your data source, your research question in two or three sentences, and your deadline.
+[Send an enquiry]({{ '/contact/?type=audit' | relative_url }}) or email [{{ site.email }}](mailto:{{ site.email }}) with your data source, your research question in two or three sentences, and your deadline.

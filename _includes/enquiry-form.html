@@ -1,0 +1,77 @@
+{% comment %}
+  The enquiry form on the Contact page.
+  You do not need to edit this file. The form's settings are in _config.yml
+  (form_id) and the email address it falls back to is site.email.
+
+  With form_id set, messages go to your inbox through Formspree.
+  With form_id empty, "Send" opens the visitor's own email app with the
+  message filled in, addressed to site.email.
+{% endcomment %}
+
+<form class="enquiry"
+      id="enquiry-form"
+      {% if site.form_id and site.form_id != "" %}action="https://formspree.io/f/{{ site.form_id }}" method="POST"{% else %}action="mailto:{{ site.email }}" method="GET" data-mailto="{{ site.email }}"{% endif %}
+      novalidate>
+
+  <div class="field">
+    <label for="enq-type">What is this about?</label>
+    <select id="enq-type" name="type" required>
+      <option value="">Choose one</option>
+      <option value="invitation">Invitation to speak, teach or examine</option>
+      <option value="collaboration">Research collaboration</option>
+      {% if site.show_services %}<option value="audit">Analysis audit</option>{% endif %}
+      <option value="review">Peer review or editorial request</option>
+      <option value="other">Something else</option>
+    </select>
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="enq-name">Your name</label>
+      <input id="enq-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="enq-email">Your email</label>
+      <input id="enq-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="enq-org">Organisation <span class="optional">optional</span></label>
+      <input id="enq-org" name="organisation" type="text" autocomplete="organization">
+    </div>
+    <div class="field">
+      <label for="enq-date">Date or deadline <span class="optional">optional</span></label>
+      <input id="enq-date" name="date" type="text" placeholder="e.g. 12 March 2027">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="enq-message">Message</label>
+    <p class="hint" id="enq-message-hint">For an invitation, include the event, the audience and the format. For other enquiries, your question and the data involved.</p>
+    <textarea id="enq-message" name="message" rows="7" required aria-describedby="enq-message-hint"></textarea>
+  </div>
+
+  <!-- Hidden from people; spam bots fill it in and Formspree discards them -->
+  <div class="visually-hidden" aria-hidden="true">
+    <label for="enq-gotcha">Leave this empty</label>
+    <input id="enq-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <input type="hidden" name="_subject" id="enq-subject" value="Website enquiry">
+
+  <p class="form-privacy">
+    {% if site.form_id and site.form_id != "" %}
+      Your message reaches me through Formspree, a form service. I use your details only to reply.
+    {% else %}
+      Sending opens your email app with this message ready to go. Nothing is stored on this website.
+    {% endif %}
+  </p>
+
+  <div class="form-actions">
+    <button class="button button-primary" type="submit">Send enquiry</button>
+    <p class="form-status" id="enq-status" role="status" aria-live="polite"></p>
+  </div>
+</form>
+
+<script src="{{ '/assets/enquiry.js' | relative_url }}" defer></script>

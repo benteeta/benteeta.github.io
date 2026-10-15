@@ -34,6 +34,8 @@ Every change works the same way:
 | Research page text: the opening paragraph (above the line `<!-- PROJECTS -->`), then earlier work, methods, funding and talks | `research.md` |
 | The list of research outputs (published work only) | `_data/publications.yml` |
 | The "Work with me" page | `work-with-me.md` |
+| The Contact page text above the form | `contact.md` |
+| Where enquiry form messages go | `_config.yml` (`form_id`, see "Set up the enquiry form") |
 | Colours | `assets/style.css` (the two blocks at the top) |
 
 You should not need to edit anything in `_layouts`, `_includes` or `assets/publications.js`.
@@ -72,6 +74,23 @@ above the first paper, then change the text:
 3. In `_config.yml`, change `photo: ""` to `photo: "/assets/photo.jpg"` and commit.
 
 The same steps add your CV: upload `cv.pdf` to `assets`, then set `cv_pdf: "/assets/cv.pdf"`.
+
+### Set up the enquiry form
+
+The Contact page has an enquiry form. Until you connect it, pressing
+**Send enquiry** opens the visitor's own email app with their message filled in.
+To receive messages straight to your inbox instead (free for up to 50 a month):
+
+1. Go to **formspree.io** and sign up with the email address where you want enquiries.
+2. Click **New form**, give it a name such as "Website enquiries", and create it.
+3. Formspree shows an address ending in `/f/` followed by a short code,
+   for example `https://formspree.io/f/xyzabcd1`. Copy only the code (`xyzabcd1`).
+4. In `_config.yml`, change `form_id: ""` to `form_id: "xyzabcd1"` (your code) and commit.
+5. When the site has rebuilt, send yourself a test enquiry from the Contact page.
+   Formspree asks you to confirm the first one by email.
+
+Links can open the form with a topic already chosen: `/contact/?type=invitation`,
+`collaboration`, `review`, `other`, or `audit` (only when "Work with me" is shown).
 
 ### Show or hide the "Work with me" page
 
